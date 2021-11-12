@@ -3,6 +3,7 @@ package com.cyl.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class TestController {
@@ -14,7 +15,7 @@ public class TestController {
 	}
 	
 	@RequestMapping(value="/test", method=RequestMethod.POST )
-	public String testPOST(String username, String password, String age) {
+	public String testPOST(@RequestParam(value="username", required=false, defaultValue="Alan")String username, String password, String age) {
 		System.out.println("success from POST !!");
 		System.out.println("username= " + username + "password= " + password );
 		return "success";

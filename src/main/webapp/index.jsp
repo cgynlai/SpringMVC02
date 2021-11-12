@@ -5,10 +5,11 @@
    
    <br />
    <form action="test" method="post">
-      username:<input type="text" name="username" /><br />
+     <!-- remove username to test @RequestParam "required" attribute -->
+     <!--  username:<input type="text" name="username" /><br /> -->
       password: <input type="text" name="password" /><br />
       age: <input type="text" name="age" /><br />
-       <input type="submit" value="POST test">
+       <input type="submit" value="POST test" />
    </form>
 </body>
 </html>
