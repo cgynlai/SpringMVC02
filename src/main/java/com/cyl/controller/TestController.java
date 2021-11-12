@@ -14,8 +14,9 @@ public class TestController {
 	}
 	
 	@RequestMapping(value="/test", method=RequestMethod.POST )
-	public String testPOST( ) {
+	public String testPOST(String username, String password, String age) {
 		System.out.println("success from POST !!");
+		System.out.println("username= " + username + "password= " + password );
 		return "success";
 	}
 
