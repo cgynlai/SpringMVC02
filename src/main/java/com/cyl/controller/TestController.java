@@ -1,5 +1,7 @@
 package com.cyl.controller;
 
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,4 +30,11 @@ public class TestController {
 		System.out.println("session id = " + sessionID );
 		return "success";
 	}
+	
+	@RequestMapping(value="/MV", method=RequestMethod.POST)
+	public String param(Map<String, Object> map) {
+		map.put("username", "admin");
+		return "success";
+	}
+	
 }

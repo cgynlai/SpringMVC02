@@ -8,5 +8,7 @@
 </head>
 <body>
    <h1>SUCCESS FROM SUCCESS JSP</h1>
+   <br />
+   ${username}
 </body>
 </html>
